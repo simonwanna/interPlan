@@ -1,0 +1,6 @@
+DTPP:
+  # _target_: interplan.planning.simulation.planner.dtpp_planner.Planner
+  _target_: planner.Planner
+  _convert_: 'all'
+  model_path: "/home/x_simwa/project/code/DTPP-private/base_model.pth"
+  device: "cuda"

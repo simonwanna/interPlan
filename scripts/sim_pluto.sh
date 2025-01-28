@@ -1,10 +1,10 @@
-EXPERIMENT=sim_interplan_idm_mobil
-# NUPLAN_EXP_ROOT=~/interplan_workspace/exp/
+EXPERIMENT=sim_interplan_pluto
+# NUPLAN_EXP_ROOT 
 INTERPLAN_PLUGIN_ROOT=$INTERPLAN_PLUGIN_ROOT
 
 python $INTERPLAN_PLUGIN_ROOT/interplan/planning/script/run_simulation.py \
 +simulation=default_interplan_benchmark \
-planner=idm_mobil_planner \
+planner=pluto \
 scenario_filter=interplan10 \
 experiment_name=$EXPERIMENT \
 hydra.searchpath="[\

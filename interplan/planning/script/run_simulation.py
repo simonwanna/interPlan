@@ -24,6 +24,10 @@ from interplan.planning.utils.modifications_preprocessing import (
     preprocess_scenario_filter,
 )
 
+import sys
+planner_path = "/home/x_simwa/project/code/pluto"
+sys.path.append(planner_path)
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -88,7 +92,16 @@ def run_simulation(cfg: DictConfig, planners: Optional[Union[AbstractPlanner, Li
     if isinstance(planners, AbstractPlanner):
         planners = [planners]
 
-    runners = build_simulations(
+    # for key and val in cfg print all keys and vals
+    # for key, val in cfg.items():
+    #     if key == 'splitter':
+    #         print('splitter..........')
+    #         continue
+    #     logger.info(f'{key}: {val}')
+
+    # exit()
+
+    runners = build_simulations(  # This is what in DTPP is called simulation (should be passed to SimulationRunner)
         cfg=cfg,
         callbacks=callbacks,
         worker=common_builder.worker,
@@ -106,3 +119,6 @@ def run_simulation(cfg: DictConfig, planners: Optional[Union[AbstractPlanner, Li
 
 if __name__ == "__main__":
     main()
+
+
+# NOTE: I have modified config in devkit: nuplan/planning/script/config/common/scenario_builder/nuplan.yaml
