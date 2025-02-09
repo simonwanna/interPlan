@@ -1,3 +1,20 @@
+# Running interPlan LLM planner....
+
+- clone and install their fork on Tuplan garage
+- add a sh script similar to sim_pdm_closed.sh
+- install extra dependencies
+- Need to route the cache to a different location since LLaMA default dwnld is in home... 
+`export HF_HOME=/path/to/project/.cache/huggingface`
+- create HF access token and give it permission to read gated repos 
+- login to HF in terminal
+- GPU issue... cannot find cuda...
+- run the script
+
+(EVERY TIME: `export HF_HOME=/home/x_simwa/project/.cache/huggingface`)
+
+
+
+
 <div id="top" align="center">
 
 <img src="interPlan_logo.png">

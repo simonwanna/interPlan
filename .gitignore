@@ -32,3 +32,6 @@ _ext
 .pytest_cache/*
 docs/_build/
 docs/generated/
+tuplan-garage-fork/
+tuplan-garage-fork
+.env
