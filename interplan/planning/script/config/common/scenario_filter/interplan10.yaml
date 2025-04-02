@@ -14,10 +14,10 @@ scenario_tokens:                # List of scenario tokens to include
   # - feb82815b92a5512-dlgloa
   # - feb82815b92a5512-dlglom
   # - feb82815b92a5512-dlgloc
-  # - feb82815b92a5512-dlgroa
+  #- feb82815b92a5512-dlgroa
   # - feb82815b92a5512-dlgrom
   # - feb82815b92a5512-dlgroc
-  # - 7bc92573f75d5a4c-dlgrom
+  #- 7bc92573f75d5a4c-dlgrom
 # medium traffic density
   # - d480a5d2b0fe5fe6-dmgloa
   # - d480a5d2b0fe5fe6-dmglom
@@ -60,7 +60,7 @@ scenario_tokens:                # List of scenario tokens to include
   # - cd0e827efbe85a8f-s1
   # - 948201ecfe2c560a-s1
   # - 6dd2064204c654b7-s2
-  # - 6dd2064204c654b7-s1
+  ## - 6dd2064204c654b7-s1
   # - 2d62c3139aa95007-s2
 # jaywalking pedestrian
   # - 71f182558ee95100-s0
@@ -85,12 +85,12 @@ scenario_tokens:                # List of scenario tokens to include
   # - 2d62c3139aa95007-s5
   # - 71f182558ee95100-s3
 # overtake parked vehicle
-  # - 2d62c3139aa95007-s0
+  - 2d62c3139aa95007-s0
   # - 2d62c3139aa95007-s1
   # - 2d62c3139aa95007-s12
   # - 2d62c3139aa95007-s13
   # - 2d62c3139aa95007-s14
-  - 9e7581ef72155c9f-s0
+  # - 9e7581ef72155c9f-s0
   # - 9e7581ef72155c9f-s1
   # - 168c4e592f1b5984-s2
   # - 168c4e592f1b5984-s0
@@ -108,7 +108,7 @@ log_names:
   - '2021.09.22.03.46.15_veh-51_01522_02013'
 map_names: null                     # Filter scenarios by map names
 
-num_scenarios_per_type: 1         # Number of scenarios per type
+num_scenarios_per_type: 1          # Number of scenarios per type
 limit_total_scenarios: null         # Limit total scenarios (float = fraction, int = num) - this filter can be applied on top of num_scenarios_per_type
 timestamp_threshold_s: null         # Filter scenarios to ensure scenarios have more than `timestamp_threshold_s` seconds between their initial lidar timestamps
 ego_displacement_minimum_m: null    # Whether to remove scenarios where the ego moves less than a certain amount

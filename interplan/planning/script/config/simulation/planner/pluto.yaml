@@ -3,3 +3,6 @@ pluto:
   _convert_: 'all'
   # planner: "src.models.pluto.pluto_model.PlanningModel"
   planner_ckpt: "/home/x_simwa/project/code/pluto/checkpoints/pluto_1M_aux_cil.ckpt"
+  
+  render: false  # render video
+  save_dir: /home/x_simwa/project/code/pluto/interplan_mov_learn
