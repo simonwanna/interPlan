@@ -2,7 +2,7 @@ EXPERIMENT=sim_interplan_pluto
 # NUPLAN_EXP_ROOT 
 INTERPLAN_PLUGIN_ROOT=$INTERPLAN_PLUGIN_ROOT
 
-python $INTERPLAN_PLUGIN_ROOT/interplan/planning/script/run_simulation.py \
+python $INTERPLAN_PLUGIN_ROOT/interplan/planning/script/run_interplan_simulation.py \
 +simulation=default_interplan_benchmark \
 planner=pluto \
 scenario_filter=interplan10 \

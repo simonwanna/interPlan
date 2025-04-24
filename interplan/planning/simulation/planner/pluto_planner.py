@@ -7,5 +7,3 @@ sys.path.append(planner_path)
 from src.planners.pluto_planner import *
 
 print("Planner imported successfully")
-
-# NOT WORKING... YET!

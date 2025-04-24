@@ -1,18 +1,22 @@
-# Running interPlan LLM planner....
+# PLUTO sim
+:car: Examples of simulations with original PLUTO (first row) and modified PLUTO using only learning based scoring (second row).
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f6c62eb8-a8fc-4aa8-ba48-8222abff5636" width="220" height="220" />
+  <img src="https://github.com/user-attachments/assets/51da8b20-d187-4e81-ac49-bcf190847405" width="220" height="220" />
+  <img src="https://github.com/user-attachments/assets/f23db7c0-fc67-4aeb-8cf6-72dc903d23cf" width="220" height="220" />
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/809a1888-412c-406f-8715-3c15c653e779" width="220" height="220" />
+  <img src="https://github.com/user-attachments/assets/9ca062fe-efae-4d39-ab34-0a74ecbd4c7a" width="220" height="220" />
+  <img src="https://github.com/user-attachments/assets/2d76eb5b-2122-48c9-a2c8-948e3f2488c9" width="220" height="220" />
+</p>
 
-- clone and install their fork on Tuplan garage
-- add a sh script similar to sim_pdm_closed.sh
-- install extra dependencies
-- Need to route the cache to a different location since LLaMA default dwnld is in home... 
-`export HF_HOME=/path/to/project/.cache/huggingface`
-- create HF access token and give it permission to read gated repos 
-- login to HF in terminal
-- GPU issue... cannot find cuda...
-- run the script
-
-(EVERY TIME: `export HF_HOME=/home/x_simwa/project/.cache/huggingface`)
-
-
+### Running PLUTO with interPlan...
+- Need to clone pluto and add render code to its `generate_planner_report()` function in `pluto_planner.py` 
+- Need to change build_reference_line attribute ``pluto_feature_builder`` and num_modes, use_hidden_proj, cat_x, ref_free_traj, in ``pluto_model`` to adhere to yaml file settings...
+- Move `run_interplan_simulation.py` and `sim_pluto.sh` to pluto dir with interplan symlinked and run it from there \
+TODO: 
+- [ ] Push code for PLUTO changes...
 
 
 <div id="top" align="center">
@@ -74,6 +78,7 @@ Planning results on the proposed *interPlan* benchmark. We also report the score
 | [IDM](https://arxiv.org/abs/cond-mat/0002177)      | 77   | 31    |
 | [IDM+Mobil](https://arxiv.org/abs/cond-mat/0002177)| 75   | 31    |
 | [PDM-Closed](https://arxiv.org/abs/2306.07962)     | 92   | 42    |
+| [PLUTO](https://github.com/jchengai/pluto)         | -    | 52    |
 | HybridLLMPlanner (Llama-7B)                        | -    | 53    |
 | LLMWaypointsPlanner (GPT-3.5)                      | -    | 22    |
 
